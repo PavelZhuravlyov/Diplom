@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" />
+  <link rel="stylesheet" href="css/foundation.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <title>Узнать себя</title>
+</head>
+<body>
+  <header>
+  	<div class="row">
+    	<div class="logo large-3 medium-3 column">
+      	<h1 class="head-logo">SearchCourses</h1>
+      </div>
+      <div class="large-6 medium-7 column">
+      	<ul class="head-menu">
+        	<li class="list-active"><a href="#">Главная</a></li>
+          <li><a href="#">Помощь</a></li>
+          <li><a href="#">О проекте</a></li>
+          <li><a href="#">Личный кабинет</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <section class="main">
+  	<div class="row m-search">
+      <div class="large-3 medium-3 column auto-reg-btn">
+        <a href="#" class="auto-reg">Авторизация/Регистрация</a>
+      </div>
+    </div>
+  	<div class="row know-yourself">
+    	<div class="large-3 medium-3 column status">
+      	<div class="status-info">
+        	<p class="st-name">Журавлёв Павел Игоревич</p>
+          <p class="st-stat">Статус: <span class="st-stat-t">Поиск</span></p>
+        </div>
+        <div class="user-btn-w">
+        	<a href="#" class="user-btn">Личный Кабинет</a>
+        	<a href="#" class="user-btn">Мои Отклики</a>
+        	<a href="#" class="user-btn">Предложения компаний<span class="user-btn-news">+1</span></a>
+        </div>
+      </div>
+      <div class="large-9 medium-9 column kn-your-bl">
+      	<h1 class="kn-your-head">Вопрос 1</h1>
+        <p class="kn-your-text-quest">
+        	Скиннер выдвинул концепцию "оперантного", подкрепляемого научения, в которой воспитание понимает филосовский конформизм. Сознание иллюстрирует психоз. Мышление, как принято считать, выбирает филосовский генезис. Этот концепт элиминирует концепт «нормального», однако ретардация возможна. Инсайт, иcходя из того, что начинает когнитивный гендер. Стимул неравномерен. Объект жизненно
+				</p>
+        <form action="#" method="POST" class="kn-your-form">
+        	<label class="kn-your-f-radio">
+          	<input type="radio" name="choise1" value="Вариант 1" class="kn-your-f-r-btn" />
+          	<span class="kn-your-f-r-spn">Вариант 1</span>
+          </label>
+          <label class="kn-your-f-radio">
+           	<input type="radio" name="choise2" value="Вариант 2" class="kn-your-f-r-btn" />
+           	<span class="kn-your-f-r-spn">Вариант 2</span>
+          </label>
+          <label class="kn-your-f-radio">
+            <input type="radio" name="choise3" value="Вариант 3" class="kn-your-f-r-btn" />
+            <span class="kn-your-f-r-spn">Вариант 3</span>
+          </label>
+          <input type="text" placeholder="Введите ответ" class="large-8 medium-8 column end search-form-input kn-your-f-input" />
+        </form>
+        <a href="#" class="kn-your-btn kn-your-btm-answer">Ответить</a>
+      </div>
+    </div>
+  </section>
+  <div class="pop-ups">
+    <div class="pop-up-auto">
+      <h1 class="pop-up-auto-head">Авторизация</h1>
+      <p class="pop-up-auto-pref">Чтобы войти в личный кабинет введите логин и пароль</p>
+      <form action="#" method="POST" class="pop-up-auto-form">
+        <label class="pop-up-auto-f-l"><span class="pop-up-auto-f-l-text">Логин(E-mail): </span>
+          <input type="text" name="Auto[login]" class="pop-up-auto-f-l-inp search-form-input" />
+        </label>
+        <label class="pop-up-auto-f-l"><span class="pop-up-auto-f-l-text">Пароль: </span>
+          <input type="password" name="Auto[pass]" class="pop-up-auto-f-l-inp search-form-input" />
+        </label>
+        <label class="pop-up-auto-f-l">
+          <span class="pop-up-auto-f-l-text-ch">Запомнить меня </span>
+          <input type="checkbox" name="Auto[remember]" class="pop-up-auto-f-l-checkbox" />
+        </label>
+        <div class="pop-up-auto-f-l-wr">
+          <div class="pop-up-auto-f-l-btn"> 
+            <a href="#" class="pop-up-auto-f-l-sub">Регистрация</a>
+          </div>
+          <div class="pop-up-auto-f-l-btn">
+            <input type="submit" value="Войти" class="pop-up-auto-f-l-sub" />
+          </div>
+        </div>
+      </form>
+      <a href="#" class="pop-up-close"></a>
+    </div>
+    <div class="pop-up-reg">
+      <h1 class="pop-up-auto-head">Регистрация</h1>
+      <p class="pop-up-auto-pref">Для того, чтобы пользоваться услугами сайта необходимо зарегистрироваться</p>
+      <form action="#" method="POST" class="pop-up-auto-form">
+        <label class="pop-up-auto-f-l"><span class="pop-up-auto-f-l-text">E-mail(Логин): </span>
+          <input type="text" name="Reg[login]" class="pop-up-auto-f-l-inp search-form-input" />
+        </label>
+        <label class="pop-up-auto-f-l"><span class="pop-up-auto-f-l-text">Пароль: </span>
+          <input type="password" name="Reg[pass]" class="pop-up-auto-f-l-inp search-form-input" />
+        </label>
+        <label class="pop-up-auto-f-l"><span class="pop-up-auto-f-l-text">Город проживания: </span>
+          <input type="password" name="Reg[town]" class="pop-up-auto-f-l-inp search-form-input" />
+        </label>
+        <label class="pop-up-auto-f-l"><span class="pop-up-auto-f-l-text">Имя: </span>
+          <input type="password" name="Reg[name]" class="pop-up-auto-f-l-inp search-form-input" />
+        </label>
+        <label class="pop-up-auto-f-l"><span class="pop-up-auto-f-l-text">Фамилия: </span>
+          <input type="password" name="Reg[SecondName]" class="pop-up-auto-f-l-inp search-form-input" />
+        </label>
+        <label class="pop-up-auto-f-l"><span class="pop-up-auto-f-l-text">Отчество: </span>
+          <input type="password" name="Reg[pass]" class="pop-up-auto-f-l-inp search-form-input" />
+        </label>
+        <label class="pop-up-auto-f-l"><span class="pop-up-auto-f-l-text">Телефон: </span>
+          <input type="password" name="Auto[pass]" class="pop-up-auto-f-l-inp search-form-input" />
+        </label>
+        <label class="pop-up-auto-f-l"><span class="pop-up-auto-f-l-text">О себе: </span>
+          <input type="password" name="Reg[pass]" class="pop-up-auto-f-l-inp search-form-input" />
+        </label>
+        <label class="pop-up-auto-f-l"><span class="pop-up-auto-f-l-text">Хобби: </span>
+          <textarea name="Reg[hobby]" class="pop-up-auto-f-l-inp search-form-input pop-up-auto-f-l-inp-ta"></textarea>
+        </label>
+        <div class="pop-up-auto-f-l-wr center-btn">
+          <div class="pop-up-auto-f-l-btn">
+            <input type="submit" value="Зарегистрироваться" class="pop-up-auto-f-l-sub" />
+          </div>
+        </div>
+      </form>
+      <a href="#" class="pop-up-close"></a>
+    </div>
+	</div>
+</body>
+</html>

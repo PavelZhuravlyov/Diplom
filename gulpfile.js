@@ -30,14 +30,9 @@
 
   browserSync = require('browser-sync').create();
 
-  gulp.task('jade', function() {
-    return gulp.src('development/temp/**/*.jade', {
-      since: gulp.lastRun('jade')
-    }).pipe(debug({
-      title: "Jade:"
-    })).pipe(jade()).on('error', notify.onError({
-      title: "Jade"
-    })).pipe(gulp.dest('public/'));
+  gulp.task('html', function() {
+    return gulp.src('development/temp/**/*.html', { since: gulp.lastRun('html') })
+          .pipe(gulp.dest('public/'));
   });
 
   gulp.task('styles', function() {
@@ -52,21 +47,27 @@
     browserSync.init({
       server: {
         baseDir: 'public',
-        index: "course.html"
+        index: "index.html"
       }
     });
     browserSync.watch('public/**/*.*').on('change', browserSync.reload);
   });
 
-  gulp.task('build', gulp.parallel('jade', 'styles'));
+  gulp.task('js', function() {
+    return gulp.src('development/js/**/*.js')
+          .pipe(gulp.dest('public/js'))
+  });
+
+  gulp.task('build', gulp.parallel('html', 'styles', 'js'));
 
   gulp.task('watch', function() {
     gulp.watch('development/styles/**/*.styl', gulp.series('styles')).on('unlink', function(filepath) {
       remember.forget('styles', path.resolve(filepath));
     });
-    return gulp.watch('development/temp/**/*.jade', gulp.series('jade')).on('unlink', function(filepath) {
-      remember.forget('jade', path.resolve(filepath));
+    gulp.watch('development/temp/**/*.html', gulp.series('html')).on('unlink', function(filepath) {
+      remember.forget('html', path.resolve(filepath));
     });
+    gulp.watch('development/js/**/*.js', gulp.series('js'));
   });
 
   gulp.task('default', gulp.series('build', gulp.parallel('serve', 'watch')));

@@ -39,7 +39,7 @@ gulp.task 'serve', ->
 	browserSync.init {
 		server: {
 			baseDir: 'public',
-			index: "course.html"
+			index: "index.html"
 		}
 	}
 

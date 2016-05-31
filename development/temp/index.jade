@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+html(lang="en")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport" content="width=device-width")
+		link(rel="stylesheet", href="css/foundation.css")
+		link(rel="stylesheet", href="css/style.css")
+		title Главная
+	body
+		header
+			.row
+				.logo.large-3.medium-3.column
+					h1.head-logo SearchCourses
+				div.large-6.medium-7.column
+					ul.head-menu
+						li.list-active
+							a(href="#") Главная
+						li
+							a(href="#") Помощь
+						li
+							a(href="#") О проекте
+						li
+							a(href="#") Личный кабинет
+			
+		section.main
+			.row.m-search
+				.large-3.medium-3.column.auto-reg-btn
+					a(href="#").auto-reg Авторизация/Регистрация
+				.large-9.medium-9.column.form
+					form(action="#" method="POST").search-form
+						input(type="text" placeholder="Введите название курса").large-8.medium-8.column.search-form-input
+						input(type="submit" value="Поиск").search-form-sub
+
+			.row.know-yourself
+				.large-3.medium-3.column.status
+					.status-info
+						p.st-name Журавлёв Павел Игоревич
+						p.st-stat Статус: 
+							span.st-stat-t Поиск
+					.user-btn-w
+						a(href="#").user-btn Личный Кабинет
+						a(href="#").user-btn Мои Отклики
+						a(href="#").user-btn Предложения компаний
+							span.user-btn-news +1
+				.large-9.medium-9.column.kn-your-bl
+					h1.kn-your-head Узнать себя
+					p.kn-your-desc.
+						Скиннер выдвинул концепцию "оперантного", подкрепляемого научения, в которой воспитание понимает филосовский конформизм. Сознание иллюстрирует психоз. Мышление, как принято считать, выбирает филосовский генезис. Этот концепт элиминирует концепт «нормального», однако ретардация возможна. Инсайт, иcходя из того, что начинает когнитивный гендер. Стимул неравномерен. Объект жизненно 
+					a(href="#").kn-your-btn.
+						Узнать себя
+
+			.row.user-btns-courses
+				.large-12.medium-12.column.courses
+					h1.kn-your-head Новые курсы/Рекомендованные курсы
+					.large-12.medium-12.column.courses-list-w
+						ul.courses-list.row
+							li.large-3.medium-4
+								.cour-l-logo
+									img(src="img/company-1.png")
+								.cour-l-info
+									h1.cour-l-head.cour-l-head-name Программирование С++
+									h1.cour-l-head Парамметры
+									ul.cour-l-params
+										li Компания
+											p.cour-l-params-val Яндекс
+										li Цена
+											p.cour-l-params-val Бесплатно
+										li Длительность
+											p.cour-l-params-val 3 мес.
+										li Город
+											p.cour-l-params-val Екатеринбург
+									a(href="#").cour-l-btn-add Подробнее
+							li.large-3.medium-4
+								.cour-l-logo
+									img(src="img/company-2.png")
+								.cour-l-info
+									h1.cour-l-head.cour-l-head-name.
+										Оператор call-центра
+									h1.cour-l-head Парамметры
+									ul.cour-l-params
+										li Компания
+											p.cour-l-params-val СКБ-Банк
+										li Цена
+											p.cour-l-params-val Бесплатно
+										li Длительность
+											p.cour-l-params-val 2 мес.
+										li Город
+											p.cour-l-params-val Екатеринбург
+									a(href="#").cour-l-btn-add Подробнее
+							li.large-3.medium-4
+								.cour-l-logo
+									img(src="img/not-logo.png")
+								.cour-l-info
+									h1.cour-l-head.cour-l-head-name.
+										Веб-дизайн
+									h1.cour-l-head Парамметры
+									ul.cour-l-params
+										li Компания
+											p.cour-l-params-val DesignStud
+										li Цена
+											p.cour-l-params-val 10 000 руб.
+										li Длительность
+											p.cour-l-params-val 2 мес.
+										li Город
+											p.cour-l-params-val Екатеринбург
+									a(href="#").cour-l-btn-add Подробнее
+							li.large-3.medium-4
+								.cour-l-logo
+									img(src="img/company-1.png")
+								.cour-l-info
+									h1.cour-l-head.cour-l-head-name Программирование С++
+									h1.cour-l-head Парамметры
+									ul.cour-l-params
+										li Компания
+											p.cour-l-params-val Яндекс
+										li Цена
+											p.cour-l-params-val Бесплатно
+										li Длительность
+											p.cour-l-params-val 3 мес.
+										li Город
+											p.cour-l-params-val Екатеринбург
+									a(href="#").cour-l-btn-add Подробнее
+							li.large-3.medium-4
+								.cour-l-logo
+									img(src="img/company-2.png")
+								.cour-l-info
+									h1.cour-l-head.cour-l-head-name.
+										Оператор call-центра
+									h1.cour-l-head Парамметры
+									ul.cour-l-params
+										li Компания
+											p.cour-l-params-val СКБ-Банк
+										li Цена
+											p.cour-l-params-val Бесплатно
+										li Длительность
+											p.cour-l-params-val 2 мес.
+										li Город
+											p.cour-l-params-val Екатеринбург
+									a(href="#").cour-l-btn-add Подробнее
+							li.large-3.medium-4
+								.cour-l-logo
+									img(src="img/not-logo.png")
+								.cour-l-info
+									h1.cour-l-head.cour-l-head-name.
+										Веб-дизайн
+									h1.cour-l-head Парамметры
+									ul.cour-l-params
+										li Компания
+											p.cour-l-params-val DesignStud
+										li Цена
+											p.cour-l-params-val 10 000 руб.
+										li Длительность
+											p.cour-l-params-val 2 мес.
+										li Город
+											p.cour-l-params-val Екатеринбург
+									a(href="#").cour-l-btn-add Подробнее
+		.pop-ups
+			.pop-up-auto
+				h1.pop-up-auto-head Авторизация
+				p.pop-up-auto-pref.
+					Чтобы войти в личный кабинет введите логин и пароль
+				form(action="#" method="POST").pop-up-auto-form
+					label.pop-up-auto-f-l
+						span.pop-up-auto-f-l-text Логин(E-mail): 
+						input(type="text" name="Auto[login]").pop-up-auto-f-l-inp.search-form-input
+					label.pop-up-auto-f-l
+						span.pop-up-auto-f-l-text Пароль: 
+						input(type="password" name="Auto[pass]").pop-up-auto-f-l-inp.search-form-input
+					label.pop-up-auto-f-l
+						input(type="checkbox" name="Auto[remember]").pop-up-auto-f-l-checkbox
+						span.pop-up-auto-f-l-text-ch Запомнить меня 
+					.pop-up-auto-f-l-wr
+						.pop-up-auto-f-l-btn 
+							a(href="#").pop-up-auto-f-l-sub Регистрация
+						.pop-up-auto-f-l-btn 
+							input(type="submit" value="Войти").pop-up-auto-f-l-sub
+				a(href="#").pop-up-close
+
+			.pop-up-reg
+				h1.pop-up-auto-head Регистрация
+				p.pop-up-auto-pref.
+					Для того, чтобы пользоваться услугами сайта необходимо зарегистрироваться
+				form(action="#" method="POST").pop-up-auto-form
+					label.pop-up-auto-f-l
+						span.pop-up-auto-f-l-text E-mail(Логин): 
+						input(type="text" name="Reg[login]").pop-up-auto-f-l-inp.search-form-input
+					label.pop-up-auto-f-l
+						span.pop-up-auto-f-l-text Пароль: 
+						input(type="password" name="Reg[pass]").pop-up-auto-f-l-inp.search-form-input
+					label.pop-up-auto-f-l
+						span.pop-up-auto-f-l-text Город проживания: 
+						input(type="password" name="Reg[town]").pop-up-auto-f-l-inp.search-form-input
+					label.pop-up-auto-f-l
+						span.pop-up-auto-f-l-text Имя: 
+						input(type="password" name="Reg[name]").pop-up-auto-f-l-inp.search-form-input
+					label.pop-up-auto-f-l
+						span.pop-up-auto-f-l-text Фамилия: 
+						input(type="password" name="Reg[SecondName]").pop-up-auto-f-l-inp.search-form-input
+					label.pop-up-auto-f-l
+						span.pop-up-auto-f-l-text Отчество: 
+						input(type="password" name="Reg[pass]").pop-up-auto-f-l-inp.search-form-input
+					label.pop-up-auto-f-l
+						span.pop-up-auto-f-l-text Телефон: 
+						input(type="password" name="Auto[pass]").pop-up-auto-f-l-inp.search-form-input
+					label.pop-up-auto-f-l
+						span.pop-up-auto-f-l-text О себе: 
+						input(type="password" name="Reg[pass]").pop-up-auto-f-l-inp.search-form-input
+					label.pop-up-auto-f-l
+						span.pop-up-auto-f-l-text Хобби: 
+						textarea(name="Reg[hobby]").pop-up-auto-f-l-inp.search-form-input.pop-up-auto-f-l-inp-ta
+					.pop-up-auto-f-l-wr.center-btn
+						.pop-up-auto-f-l-btn 
+							input(type="submit" value="Зарегистрироваться").pop-up-auto-f-l-sub
+				a(href="#").pop-up-close
+	
+		
+		script(src="js/handlebars.js")
+		script(src="js/jquery.js")
+		script(src="js/main.js") 

@@ -1,0 +1,28 @@
+resetMarg()
+	for numb in 1..5
+		h{numb}
+			margin 0
+			padding 0
+
+prefixProperty(property, value)
+	-webkit-{property}: value
+	-moz-{property}: value
+	-o-{property}: value
+	-ms-{property}: value
+	{property}: value
+
+*
+	padding 0
+	margin 0
+	
+ul
+	list-style-type none
+
+a
+	color white
+	text-decoration none	
+
+textarea
+	resize none
+
+resetMarg()

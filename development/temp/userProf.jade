@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+html(lang="en")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport" content="width=device-width")
+		link(rel="stylesheet", href="css/foundation.css")
+		link(rel="stylesheet", href="css/style.css")
+		title Пользователь
+	body
+		header
+			.row
+				.logo.large-3.medium-3.column
+					h1.head-logo SearchCourses
+				div.large-6.medium-7.column
+					ul.head-menu
+						li
+							a(href="#") Главная
+						li
+							a(href="#") Помощь
+						li
+							a(href="#") О проекте
+						//- li.list-active
+						//- 	a(href="#") Узнать себя
+						li.list-active
+							a(href="#") Личный кабинет
+			
+		section.main
+			//- .row.m-search
+			//- 	.large-3.medium-3.column.auto-reg-btn
+			//- 		a(href="#").auto-reg Авторизация/Регистрация
+
+			.row.know-yourself
+				.large-3.medium-3.column.status
+					.status-info
+						p.st-name Журавлёв Павел Игоревич
+						p.st-stat Статус: 
+							span.st-stat-t Поиск
+					.user-btn-w
+						a(href="#").user-btn Личный Кабинет
+						a(href="#").user-btn Мои Отклики
+						a(href="#").user-btn Предложения компаний
+							span.user-btn-news +1
+				.large-9.medium-9.column.user-profile
+					.user-profile-head
+						.user-profile-foto-w
+							img(src="img/User-profile.jpg", alt="").user-profile-foto
+						.user-profile-name-w
+							p.user-profile-name.
+								Билл Гейтс
+							p.user-profile-name-status.
+								Очень хочу посетить курсы дизайна интерьеров
+					.user-profile-info
+						a(href="#").user-profile-info-prof.user-profile-info-active Профиль
+							span.user-profile-info-prof-line
+						a(href="").user-profile-info-prof Рекомендации курсов
+							span.user-profile-info-prof-line
+					.user-profile-main_inform
+						.user-profile-main_inform-links
+							a.user-profile-main_inform-link(href="#").user-profile-main_inform-link-active.
+								Общее
+							a.user-profile-main_inform-link(href="#").
+								Образование
+							a.user-profile-main_inform-link(href="#").
+								Курсы
+						.user-profile-main_inform-bl(data-blockInfo="1").large-6.medium-8
+							ul.user-profile-main_inform-bl-list
+								li Возраст:
+									p 50
+								li Телефон:
+									p +7 904-23-231-12
+								li E-mail:
+									p billMicrosoft@micr.ru
+								li Город проживания:
+									p Сан-Франциско
+								li Хобби:
+									p Чтение книги, путешествия
+								li О себе
+									p.
+										Американский предприниматель и
+										общественный деятель, филантроп, один из 
+										создателей и бывший крупнейший акционер 
+										компании Microsoft. До июня 2008 года 
+										являлся руководителем компании
+							a(href="#").user-profile-main_inform-bl-edit.
+								Редактировать
+						.user-profile-main_inform-bl(data-blockInfo="2").large-6.medium-8
+							ul.user-profile-main_inform-bl-list
+								li Школа:
+									p г. Сиэтл «Лейксайд»
+								li Университет:
+									p Гарвардский университет
+								li Ключевые навыки
+									p.
+										Теорема Ферма масштабирует многочлен.
+										Теорема Ферма последовательно 
+										позиционирует действительный интеграл 
+										Пуассона. Нормаль к поверхности 
+										небезынтересно концентрирует
+							a(href="#").user-profile-main_inform-bl-edit.
+								Редактировать
+						.user-profile-main_inform-bl(data-blockInfo="3").large-6.medium-8
+							.user-profile-main_inform-bl-course
+								ul.user-profile-main_inform-bl-list.user-profile-main_inform-bl-list-line
+									li Название курса
+										p Программирование на языке Python
+									li Период обучения
+										p март 2014 - июнь 2014
+									li Представитель курсов
+										p Яндекс Екатеринбург
+							a(href="#").user-profile-main_inform-bl-edit.
+								Редактировать
+			.row.user-btns-courses
+				.large-12.medium-12.column.courses
+					h1.kn-your-head Рекомендованные курсы
+					.large-12.medium-12.column.courses-list-w
+						ul.courses-list.row
+							li.large-3.medium-4
+								.cour-l-logo
+									img(src="img/company-1.png")
+								.cour-l-info
+									h1.cour-l-head.cour-l-head-name Программирование С++
+									h1.cour-l-head Парамметры
+									ul.cour-l-params
+										li Компания
+											p.cour-l-params-val Яндекс
+										li Цена
+											p.cour-l-params-val Бесплатно
+										li Длительность
+											p.cour-l-params-val 3 мес.
+										li Город
+											p.cour-l-params-val Екатеринбург
+									a(href="#").cour-l-btn-add Подробнее
+							li.large-3.medium-4
+								.cour-l-logo
+									img(src="img/company-2.png")
+								.cour-l-info
+									h1.cour-l-head.cour-l-head-name.
+										Оператор call-центра
+									h1.cour-l-head Парамметры
+									ul.cour-l-params
+										li Компания
+											p.cour-l-params-val СКБ-Банк
+										li Цена
+											p.cour-l-params-val Бесплатно
+										li Длительность
+											p.cour-l-params-val 2 мес.
+										li Город
+											p.cour-l-params-val Екатеринбург
+									a(href="#").cour-l-btn-add Подробнее
+							li.large-3.medium-4
+								.cour-l-logo
+									img(src="img/not-logo.png")
+								.cour-l-info
+									h1.cour-l-head.cour-l-head-name.
+										Веб-дизайн
+									h1.cour-l-head Парамметры
+									ul.cour-l-params
+										li Компания
+											p.cour-l-params-val DesignStud
+										li Цена
+											p.cour-l-params-val 10 000 руб.
+										li Длительность
+											p.cour-l-params-val 2 мес.
+										li Город
+											p.cour-l-params-val Екатеринбург
+									a(href="#").cour-l-btn-add Подробнее
+							li.large-3.medium-4
+								.cour-l-logo
+									img(src="img/company-1.png")
+								.cour-l-info
+									h1.cour-l-head.cour-l-head-name Программирование С++
+									h1.cour-l-head Парамметры
+									ul.cour-l-params
+										li Компания
+											p.cour-l-params-val Яндекс
+										li Цена
+											p.cour-l-params-val Бесплатно
+										li Длительность
+											p.cour-l-params-val 3 мес.
+										li Город
+											p.cour-l-params-val Екатеринбург
+									a(href="#").cour-l-btn-add Подробнее
+							li.large-3.medium-4
+								.cour-l-logo
+									img(src="img/company-2.png")
+								.cour-l-info
+									h1.cour-l-head.cour-l-head-name.
+										Оператор call-центра
+									h1.cour-l-head Парамметры
+									ul.cour-l-params
+										li Компания
+											p.cour-l-params-val СКБ-Банк
+										li Цена
+											p.cour-l-params-val Бесплатно
+										li Длительность
+											p.cour-l-params-val 2 мес.
+										li Город
+											p.cour-l-params-val Екатеринбург
+									a(href="#").cour-l-btn-add Подробнее
+							li.large-3.medium-4
+								.cour-l-logo
+									img(src="img/not-logo.png")
+								.cour-l-info
+									h1.cour-l-head.cour-l-head-name.
+										Веб-дизайн
+									h1.cour-l-head Парамметры
+									ul.cour-l-params
+										li Компания
+											p.cour-l-params-val DesignStud
+										li Цена
+											p.cour-l-params-val 10 000 руб.
+										li Длительность
+											p.cour-l-params-val 2 мес.
+										li Город
+											p.cour-l-params-val Екатеринбург
+									a(href="#").cour-l-btn-add Подробнее
+		.pop-ups
+			.pop-up-auto
+				h1.pop-up-auto-head Авторизация
+				p.pop-up-auto-pref.
+					Чтобы войти в личный кабинет введите логин и пароль
+				form(action="#" method="POST").pop-up-auto-form
+					label.pop-up-auto-f-l
+						span.pop-up-auto-f-l-text Логин(E-mail): 
+						input(type="text" name="Auto[login]").pop-up-auto-f-l-inp.search-form-input
+					label.pop-up-auto-f-l
+						span.pop-up-auto-f-l-text Пароль: 
+						input(type="password" name="Auto[pass]").pop-up-auto-f-l-inp.search-form-input
+					label.pop-up-auto-f-l
+						input(type="checkbox" name="Auto[remember]").pop-up-auto-f-l-checkbox
+						span.pop-up-auto-f-l-text-ch Запомнить меня 
+					.pop-up-auto-f-l-wr
+						.pop-up-auto-f-l-btn 
+							a(href="#").pop-up-auto-f-l-sub Регистрация
+						.pop-up-auto-f-l-btn 
+							input(type="submit" value="Войти").pop-up-auto-f-l-sub
+				a(href="#").pop-up-close
+
+			.pop-up-reg
+				h1.pop-up-auto-head Регистрация
+				p.pop-up-auto-pref.
+					Для того, чтобы пользоваться услугами сайта необходимо зарегистрироваться
+				form(action="#" method="POST").pop-up-auto-form
+					label.pop-up-auto-f-l
+						span.pop-up-auto-f-l-text E-mail(Логин): 
+						input(type="text" name="Reg[login]").pop-up-auto-f-l-inp.search-form-input
+					label.pop-up-auto-f-l
+						span.pop-up-auto-f-l-text Пароль: 
+						input(type="password" name="Reg[pass]").pop-up-auto-f-l-inp.search-form-input
+					label.pop-up-auto-f-l
+						span.pop-up-auto-f-l-text Город проживания: 
+						input(type="password" name="Reg[town]").pop-up-auto-f-l-inp.search-form-input
+					label.pop-up-auto-f-l
+						span.pop-up-auto-f-l-text Имя: 
+						input(type="password" name="Reg[name]").pop-up-auto-f-l-inp.search-form-input
+					label.pop-up-auto-f-l
+						span.pop-up-auto-f-l-text Фамилия: 
+						input(type="password" name="Reg[SecondName]").pop-up-auto-f-l-inp.search-form-input
+					label.pop-up-auto-f-l
+						span.pop-up-auto-f-l-text Отчество: 
+						input(type="password" name="Reg[pass]").pop-up-auto-f-l-inp.search-form-input
+					label.pop-up-auto-f-l
+						span.pop-up-auto-f-l-text Телефон: 
+						input(type="password" name="Auto[pass]").pop-up-auto-f-l-inp.search-form-input
+					label.pop-up-auto-f-l
+						span.pop-up-auto-f-l-text О себе: 
+						input(type="password" name="Reg[pass]").pop-up-auto-f-l-inp.search-form-input
+					label.pop-up-auto-f-l
+						span.pop-up-auto-f-l-text Хобби: 
+						textarea(name="Reg[hobby]").pop-up-auto-f-l-inp.search-form-input.pop-up-auto-f-l-inp-ta
+					.pop-up-auto-f-l-wr.center-btn
+						.pop-up-auto-f-l-btn 
+							input(type="submit" value="Зарегистрироваться").pop-up-auto-f-l-sub
+				a(href="#").pop-up-close

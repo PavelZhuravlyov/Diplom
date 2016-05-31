@@ -1,0 +1,861 @@
+icon-width_height = 50px
+
+html
+	height 100%
+
+body
+	height 100%
+	background url('../img/main-bg.jpg') center
+	background-size cover
+	color white
+	background-attachment fixed
+	padding 35px 0 20px
+	font-family 'OpenSansReg'
+	line-height inherit
+	
+.m-search
+	margin-bottom 26px
+	
+.auto-reg-btn
+	padding-left 0	
+
+.auto-reg
+	text-align center
+	font-size 18px
+	background #1bbd4d
+	display block
+	height 40px
+	line-height 40px
+	prefixProperty(border-radius, 10px)
+	prefixProperty(transition, all .3s)
+	max-width 270px
+	// margin-right 0.9375rem
+	
+	&:hover
+		background #1ad353
+		
+.search-form-input
+	height 40px
+	line-height 40px
+	prefixProperty(border-radius, 10px)
+	border 0
+	outline none
+	padding 0 12px
+	box-sizing border-box
+	box-shadow 2px 0 10px 0 rgba(0,0,0,.4)
+	color #4b4141
+	
+	&::-webkit-input-placeholder 
+		color #b2a6a6
+	&:-moz-placeholder 
+		color #b2a6a6
+	
+.search-form-sub
+	text-align center
+	prefixProperty(border-radius, 10px)
+	display inline-block
+	vertical-align top
+	width 170px
+	height 40px
+	line-height 40px
+	box-shadow 2px 0 10px 0 rgba(0,0,0,.4)
+	background #1bbd4d
+	border 0
+	outline none
+	font-size 22px
+	margin-left 30px
+	prefixProperty(transition, all .5s)
+	
+	&:hover
+		background #1ad353
+	
+	&:active
+		box-shadow inset 0px 0 5px 0 rgba(0,0,0,.6)
+
+.status
+	padding-left 0
+
+.status-info
+	margin-bottom 30px	
+	
+	.st-name
+		font-size 20px
+	
+	.st-stat
+		font-size 16px		
+
+.kn-your-bl
+	// padding-left 30px
+	margin-bottom 52px
+
+.kn-your-head
+	font-family "OpenSansBold"
+	font-size 28px
+	margin-bottom 15px
+
+.kn-your-desc
+	line-height 24px
+	margin-bottom 20px
+
+.kn-your-text-quest
+	line-height 24px
+	margin-bottom 38px
+
+.kn-your-btn
+	line-height 40px
+	height 40px
+	background #0d98e2
+	text-align center
+	font-size 22px
+	prefixProperty(transition, all .2s)
+	prefixProperty(border-radius, 10px)
+	display block
+	width 270px
+	margin 0 auto
+	
+	&:hover
+		background #1aacfa
+
+.user-btn-w
+	max-width 270px
+	padding 0
+
+.user-btn
+	display block
+	text-align center
+	font-size 18px
+	height 40px
+	line-height 40px
+	prefixProperty(transition, background .2s)
+	prefixProperty(border-radius, 10px)
+	background #d0ae26
+	margin-bottom 18px
+	position relative
+	&::before
+		content ''
+		position absolute
+		top 50%
+		left 50%
+		transform translate(-51%, -50%)
+		width icon-width_height
+		height icon-width_height
+		display none
+	&:hover
+		background #e6c43b
+		color #0d98e2
+	&:hover > .user-btn-news
+		color white
+
+.private
+	&::before
+		background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAADR0lEQVRoQ+2Z/VVTQRDFLxUoFSgVKBWoFYgVqBVoB2AFaAVqB1oBUoFQgVqBWoGcH2eGs3kh+3ZnJ4QTmX+Sk7zdnTt3vnbejrZEdrYEh+6ANDD5UNIDSU8nz36TdNqwvuuRdTDyUtKrawCUiv2U9ELSWZe2lYczgdyX9FHSgZ331xSFARee4X+Y+iPpk6SvkspnQtiygKDgiaTHkgAAI18qGgEA5lx49rWB2yiQI0mHks7NpbD2nACa+GHtPQOOu4UkgxGC+oedvh/we9YTK4B5FnWzDCBvJR2br3t89FrVGSVeQntkAMG/n5uP4/sRwc2+W4zsRjbIAELGeTLiFqb4P/sM6RRaNLEYlsSiYf++LUCckUiglzbZOCNb41oe7NSAWhGsxTD1hIJKHcJNuyUjRjx1vrPi1q2EJE/hn60r6N4jA4hbk4522um2KjScwjOA0FfRLNKWhGqApN+S6NfC7pkBxIN9xLVuRWXPyFrD7pnByLB/W4DjnhvttTxGuPXhXr39Fuu5AtAFcyfpXX+ZUDIYYR9nJbKnV/QwG5FDa+mUO8UjST2tine94ULoCmUxwn7vJb0x9yILtYivCRfCdQAp7xR7Dfdv6gY3Sz57WLzWQJmMcICnYtyMtn7V3b2cuIx0BFegsoGgICAY99TuJ143mLjwfXi+lQ2kZKUFSAob2VnLaW6p9MOVfBoom2IEF6RRTDNmNhCqM3d4FCVzUe1XiRfC4YyVZg3TlPRLv8Rni+/72JRApzUZCvgMRmCBXomeCWkdm8Ia8UQ3gACMXq3G4kp6R4AwlOOKWt4KqdD81jL7RSnAUN3LgTbg+I3eq1l6gXAwbQjWhwmEWkDTSFsSsqbtxXrGpcyAEfaCpQ8thukBAgAOAwzyyyzHYa0MzFnY35/Aqrsce3MugIZca/oCh0Bm4+GXMzOo/JUD41ik+g6lhREfieJCWCp08ZmjovI/bkzM4HJkNtL1kswB8TY7rScKAiKl4wGAwcUw6ILUgJQvcEYH1EH9F5Z5W8OPS8W2BsTZGLqCZiAo9vAr9RIrNSDe/IUHAskg2M4HHUudQw2I90Jr0CdlywXd/wsgKWa7qU3m0u9N6TF8zh2QYRMmb3ABgfq3Mx0R0YoAAAAASUVORK5CYII=') center no-repeat
+		background-size cover
+.offers
+	&::before
+		background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAC/0lEQVRoQ+2agXHVMBBENxUQOoAKCBUQKgAqIOkgVABUQKgAqACoAKgg6SBJBUAFMC+jHW6EHVvSF7EH38yf/23LZ+3t3erkZE9/7EzSQThew89Pkp4x0b0w219rmPnAHK8xDAGJ55aMzYHfgCyFpY2RpTDheWyMlDJyKOmlJL4xNP+tpK+ljkbG/xNGXiUQQ3N4LYnrrdYdCAx8kfQzTfh9mvFROr4j6fEOmOkOhNR5JOmFpNMs7CeS3kj6LOlpIyXdgfgBdyX9yCZ7T9JFOtfaQWxACCQRJTXcJZ+nFLoMkUednhSm1hy/eSZWM8LDaPX3M4+kz0NJBuNi5zzq9CGNfx5qJhb7XL87A+JIfwuFyjkKOy/eEvkt8RvBVDPyPbERixh2OA8b97OQwQwqRZphgEXF8gWx1G9zi0KqsAZEIFahq1Q/NYpa67eaEacAEb3eXkr6mFqQlnWh1m81EKKPSsFKNFZwrnnNQNFIJ1KL3xYHrnM/gQA4v62Ec/zurNj9UPI8yi+tB5MEzLvQJE6lGYCOU31x75jfMT/VjBBhJJRvHowRSX9QKqIPQ/RXpAzXzBTXCACtCeBh1hLNeX/wi3gAFOke65argLAIokBTxoMZl7cm+X2AggECM2WMo29rTi2iR8pgtOCONMdEkYKHIUAwtsRgDjAwgIC4bswc+xmMFHQXbf/FjNDkMdGx1vumJnEKlNchxg01kaQhgQIg3UO0YiBLeXGXAy0G4v3FVHR7Xh9ap4qB9Jxgi+8NSEv0ety7MdIjqi0+N0Zaotfj3v+HkR7Rm/JJC0KvFd/GTN0zyshtr+B0zPRzbhyrgUzd2Os6jaPfxgCGlj3vdIeePcpIr4nO9euWnvHsafgTxE22WCAGwCYOAxj7kDFbNBAmzeaMXSFbYb+xGdpxLh4IYNghAgIwFD8ikINZBRDAsCtFBB4kELmirQYIYHJFo2YAh60KiAs9KppfRKwSyJCi+Y3NX/+LMlfvb3NcVDTPY5VAckXjeLVAoqIZmH4DBKv6M2AarLsAAAAASUVORK5CYII=') center no-repeat
+		background-size cover
+.reply
+	&::before
+		background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAEPElEQVRoQ92a/ZFMQRTFz0aACBABIkAEiAARsBEgAkSACBABIrAiQASIgPpt9Znqed7rvv0xNVXb/8zbnf64595zv/rNicbHNUlXJd1ZbPVZ0pfx7WM7nMSmrc56KOnRCoB88g9JDySdDZwTWtoD5LKkN5LupxP+JEGxgAdz+B5L/Zb0VtJHSfmckIDRSa1AEPCTpJuSAIBFPhQOAwCW82Du4wQuKmNoXiuQ55KeSfqWKIW2awPQ+A9rLyXg0G3qaAGCU39Pp9/q4D3r8RXA3J1NsxYgTyW9TFy3f7Rq1RbFX3r3WD2zBQj8vpc4Dvd7BjT7mnzkSs8GW2tagBBxbk+gxd8kTMvZVcwtm+Ef8LzHP3JBjg7kwljkwgCxs5MDSkmwxGfyCQmVPITjTxstPuLQ+SIltx4hHMLfpaqgZ4/h8GttUtEuK92oQDNC+DAQEtj7wRzwSxL12gg9h4HY2UeoZXqOWHUakJE6aQY9h4HM4DdlP73MUWstC0HXB71a6y3W0wJQHdCTtK4vBpSW8MtGtgrPrWtdmky3Ro8wrKGnuNFYc7nqnZ4IbaZWrbLulaQniV5EocjwmumJcARI3lNcD/Tf5A0qZz5HK+dNpfVYhM2cU6AZ4Xird89vXKbnjhxVLxAEBATXPaW84rzBjQvPB7vf6gWSWyUCpGYNQjJtNGB5dmUMcMI9DCDa8TycEJcbRPqTWiZHaHILOSYyyD3ksP8AHdoipcsGilCyPDRlENFQDlYwBVnvezFf9OGPJNS9nqgXCJrkNgQhiFybJpfkRJjPc5UAAChDn1Lag3mcSRiHgoy96qAHCBpCk3zWuM+BvjZ1DnE7wHenSbgIrTzHzRl/79qBFiBLPkevTbEalLHWbckeEEsw0Ow8l0WAYEqEyLtCtMv/Ine/ubZtnRn1luu+c0tvAUGLlCFwGUswyAUspiyp8XmNKvndcc2v1tZDZc618vb2WwMCAIR1NPmZeIw2Wy2QCzRy8eDXGXZyRzVb5TQHsnyBgyMDaNbLmZHGjOACO5Z+uWvUciA4oV/goL2pjU8K1+y/LBxt+S1r25JrZY7z1JmBuMw+ZE20duebU2at+HRlsBdqFw50vi9AcqcZuVio5YItIFCXRg2LcL75n5f/pZubHRBbY0ZILIHZ6iydZ5ZgTPVS0t11nljExd/0C4EFqpqz5y9OkQlaETERdst/9pzdJq9Ro/f71yl5RsJvDibir3vh99BASGIkwGhCtJZrDKkmxF7NR9ZZ42iy9IoaWtXyF/fQFKDFEiUiVM+c/BX1jKIR+rFnqGjsEbi0Ji/j8Rt8qGVQQhFpu8v4lsNqc/PGCpphnVohiuZ5z+/388ONVU3I6PcIhM/wSwgGz/gF9VTe6pJf8Bn39au/gYn0I1HBeuahZQrT/Ic3pX02+6BjA7HQAMJCvg7CCgys4+sgKLhJv3/24yZfezqRdAAAAABJRU5ErkJggg==') center no-repeat
+		background-size cover
+
+.user-btn-news
+	font-size 12px
+	display inline-block
+	vertical-align text-bottom
+	width 22px
+	height 22px
+	line-height 22px
+	border-radius 50%
+	background #ba322b
+	margin-left 7px
+	text-align center
+	
+.courses
+	margin-top -9px	
+	
+	.kn-your-head
+		margin-bottom 45px
+
+.courses-list
+	text-align center
+	&-item
+		prefixProperty(border-radius, 10px)
+		background white
+		padding 0
+		max-width 270px
+		display inline-block
+		vertical-align top
+		margin-bottom 20px
+		margin-right 10px
+		
+		&:last-child
+			margin-right 0
+
+		&:nth-child(4n+4)
+			margin-right 0
+			
+		// &:nth-child(3n+3)
+		// 	float right
+
+.cour-l-logo
+	background white
+	height 97px
+	line-height 97px
+	overflow hidden
+	text-align center
+	prefixProperty(border-radius, 10px 10px 0 0)
+	box-shadow 0px 2px 7px 0px rgba(0,0,0,.5)
+	position relative
+	
+	img
+		display inline-block
+		vertical-align middle
+		
+.cour-l-info
+	background: #ae9f93;
+	background: -moz-linear-gradient(top,  #ae9f93 0%, #dab797 34%, #efc090 68%, #eaaa5d 100%);
+	background: -webkit-linear-gradient(top,  #ae9f93 0%,#dab797 34%,#efc090 68%,#eaaa5d 100%); 
+	background: linear-gradient(to bottom,  #ae9f93 0%,#dab797 34%,#efc090 68%,#eaaa5d 100%); 
+	// filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ae9f93', endColorstr='#eaaa5d',GradientType=0 ); 
+	text-align left
+	
+	padding 15px
+	box-sizing border-box
+	prefixProperty(border-radius, 0px 0px 10px 10px)
+
+.cour-l-head
+	font-size 19px
+	font-family "OpenSansBold"
+	color #45494a
+	margin-bottom 15px
+
+.cour-l-head-name
+	margin-bottom 30px
+	
+.cour-l-params
+	margin-bottom 50px
+	
+	& li
+		background transparent
+		font-size 16px
+		color #45494a
+		margin 0 0 10px 0 !important
+		display block
+		float none !important
+		margin 0 0 12px 0
+	
+		&:last-child
+			margin-bottom 0
+	
+.cour-l-params-val
+	float right
+
+.cour-l-btn-add
+	text-align center
+	font-size 18px
+	display block
+	width 160px
+	height 35px
+	line-height 35px
+	prefixProperty(border-radius, 8px)
+	prefixProperty(transition, background .2s)
+	background #24b651
+	margin 0 auto
+	text-transform uppercase
+	
+	&:hover
+		background #1ad353
+
+.pop-ups
+	position absolute
+	top 50%
+	left: 50%
+	z-index 30
+
+.pop-up-auto
+	display none
+
+.pop-up-auto, .pop-up-reg
+	position fixed
+	top 50%
+	left 50%
+	width 380px
+	margin -209px 0 0 -140px
+	prefixProperty(border-radius, 8px)
+	prefixProperty(transition, background .5s)
+	padding 20px
+	box-sizing border-box
+	color #45494a
+	background: #ae9f93;
+	background: -moz-linear-gradient(top,  #ae9f93 0%, #dab797 34%, #efc090 68%, #eaaa5d 100%);
+	background: -webkit-linear-gradient(top,  #ae9f93 0%,#dab797 34%,#efc090 68%,#eaaa5d 100%); 
+	background: linear-gradient(to bottom,  #ae9f93 0%,#dab797 34%,#efc090 68%,#eaaa5d 100%); 
+
+	&-head
+		font-family "OpenSansBold"
+		font-size 28px	
+		text-align center
+		margin-bottom 25px
+	
+	&-pref
+		font-size 16px
+		text-align center
+		margin-bottom 20px
+		
+	&-f-l
+		display block
+		margin-bottom 15px
+		
+		&:before,
+		&:after
+			content ''
+			display table
+		
+		&:after
+			clear both	
+					
+		& table tr
+						
+		&-text
+			display block
+			
+		&-inp
+			display block
+			width 100%
+			height 30px
+			line-height 30px
+			font-size 16px
+			color white
+			background #666B6D
+			
+			&-ta
+				padding-top 10px
+				padding-left 10px
+				height 100px
+		
+		&-checkbox
+			opacity 0
+		
+		&-text-ch
+			cursor pointer
+			position relative
+			display inline-block
+			vertical-align top
+			padding-left 20px
+			
+			&::before
+				content ''
+				position absolute
+				left 0
+				top 50%
+				margin-top -7px
+				width 17px
+				height 17px 
+				background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAhCAYAAAA/F0BXAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDIxIDc5LjE1NTc3MiwgMjAxNC8wMS8xMy0xOTo0NDowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTQgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjBDNjZBRjk0MDIyRjExRTZCQUFERTNFMUM1RDg3QzVGIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjBDNjZBRjk1MDIyRjExRTZCQUFERTNFMUM1RDg3QzVGIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MEM2NkFGOTIwMjJGMTFFNkJBQURFM0UxQzVEODdDNUYiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MEM2NkFGOTMwMjJGMTFFNkJBQURFM0UxQzVEODdDNUYiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz68kxtAAAABF0lEQVR42mJ0dPf8z0A+YNy3YxsDEwMVAFUMYUF3HhF6/tPEJaOGDHtDWAglpKHnHUZKDWH8//8/xS5hBBZKFBkAK5T+k4v3T9y+n/Em43uyA3Z/4nYQ5QDEh5jINsAAzJz1X/2/PxOWkg0v3p8ENeAEB4Njvmc6thSL3wUTty8HM45zMjiucMBMbPvNH4EUeeAxYAWQimA4wYpiAGqKjboKIrcDFRvicEE4EM90XO6CJ9lPNYOxzgE1GWO4gIFhDjAMMvDmYsdbwgz7GRjMgcyTQHwGqNkWSEdCXTALFogEMyBQ4SkgZQnlHgbiLCCejc8ArLkYqOEEkLKActcA+WlkFQVAjSAvgcIlmqKSDWjQECzZAAIMAPLpYZQUPj2PAAAAAElFTkSuQmCC') top no-repeat			
+		
+		& .active-ch
+			&::before
+				background-position 0 -18px
+		
+		&-sub
+			border 0
+			outline 0
+			text-align center
+			font-size 18px
+			display inline-block
+			vertical-align top
+			color white
+			padding 0 15px
+			height 35px
+			line-height 35px
+			prefixProperty(border-radius, 8px)
+			prefixProperty(transition, background .2s)
+			background #24b651
+			margin 0 auto
+			text-transform uppercase
+			
+			a&
+				background #0d98e2;
+			
+			a&:hover
+				background #1aacfa;
+
+			&:hover
+				background #1ad353
+		
+		&-wr::before,
+		&-wr::after
+			content ''
+			display table
+		
+		&-wr::after
+			clear both			
+
+		&-btn
+			display inline-block
+			vertical-align top
+				
+			&:last-child
+				float right
+
+.pop-up-close
+	position absolute
+	right 10px
+	top 10px
+	background url(../img/close.svg)
+	background-size cover
+	width 30px
+	height 30px
+
+.body-shadow::before
+	content ''
+	position fixed
+	top 0
+	left 0
+	right 0
+	bottom 0
+	background rgba(black, .5)
+	z-index 1
+
+.pop-up-reg
+	display none
+	position absolute
+	top: 0
+	
+.center-btn
+	text-align center
+	
+	& .pop-up-auto-f-l-btn
+		float none
+	
+.kn-your-btm-answer
+	display inline-block
+	vertical-align top
+
+.kn-your-f-radio
+	display block
+	margin-bottom 10px
+	font-size 18px
+	margin-left -15px
+	
+	& input[type="radio"], & input[type="checkbox"]
+		opacity 0
+	
+.kn-your-f-r-spn
+	display inline-block
+	vertical-align top
+	padding-left 30px
+	position relative
+	
+	&::before
+		content ''
+		position absolute
+		top 50%
+		left 0
+		margin-top -10px
+		width 20px
+		height 20px
+		background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAApCAYAAAA1bQl+AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDIxIDc5LjE1NTc3MiwgMjAxNC8wMS8xMy0xOTo0NDowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTQgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkI3RDREOTEzMDU0MTExRTY5NzQwQkU3NDQ3QzFGRkE3IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkI3RDREOTE0MDU0MTExRTY5NzQwQkU3NDQ3QzFGRkE3Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6QjdENEQ5MTEwNTQxMTFFNjk3NDBCRTc0NDdDMUZGQTciIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6QjdENEQ5MTIwNTQxMTFFNjk3NDBCRTc0NDdDMUZGQTciLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz6K7qbjAAABQElEQVR42mK8u4HhPwMVARMDlQHVDWRB4zOSac7/oePlUQNHDRw1cFCUNv9HhpcZqW3g/5GdDhlJwcpODMpAvHSxBO50SDQAGqQBpE4DMU+DFgMDKzAmIl6S6WWgYTpA6izIMJhYtRSZLgQapg2kzgAxO1zwHwPD5ls4IgWogYckwxgYvm87xcCg9RWLgUANbUDqOZBuxmKYEdSbHEjCP4HYSP0bllhulgNTldBwqQEa0IHmstNoLvsFxAZ39zHcwFraHGLH8GE50KDHQHonEJ9A8w3IZebohqG4cPdtMLUWTX4KEN9Gjk0g+APExkDDLhJM2EBFIUBqOZ5I/g7EpkB1V4nOekDFUUBqDRa1X6Euu0ByXgZqCgVSS9HCDGTYdbILB6DmGCA1FYj3Qg27SUzCZ0RrtFPcgh2BlRRAgAEAiM9SBmH9BKcAAAAASUVORK5CYII=') top no-repeat
+
+.kn-your-f-input
+	height 33px
+	line-height 33px
+	font-size 16px 
+	margin-bottom 20px
+
+.know-yourself
+	margin-bottom 30px
+
+.user-profile-head
+	margin-bottom 20px
+
+.user-profile-foto-w
+	display inline-block
+	vertical-align top
+	width 140px
+	height 140px
+	prefixProperty(border-radius, 50%)
+	overflow hidden
+
+.user-profile-foto
+	width 100%
+	height 100%
+
+.user-profile-name-w
+	display inline-block
+	vertical-align top
+	margin-left 40px
+
+.user-profile-name
+	font-size 24px
+	margin-bottom 10px
+	
+.user-profile-name-status
+	font-size 16px
+	margin-bottom 
+	
+.user-profile-info
+	text-align center
+	margin-bottom 30px
+	
+	&-prof
+		display inline-block
+		vertical-align top
+		position relative
+		margin-right 70px
+		font-size 20px
+		
+		&:last-child
+			margin-right 0
+	
+		&-line
+			display block
+			margin 5px auto 0
+			prefixProperty(transition, all .3s)
+			height 6px
+			background #24b651
+			width 0
+	
+	&-active > .user-profile-info-prof-line
+		width 100%
+	
+	&-prof:hover > .user-profile-info-prof-line
+		width 100%
+
+.user-profile-main_inform
+	text-align center
+
+.user-profile-main_inform-links
+	margin-bottom 10px
+		
+.user-profile-main_inform-link
+	background #bbb5b0
+	font-size 20px
+	display inline-block
+	vertical-align top
+	height 50px
+	line-height 50px
+	text-align center
+	width 30%
+	margin-right 15px
+	prefixProperty(transition, all .5s)
+	
+	&:hover
+		background #d99114
+		box-shadow 0px 0px 5px 0px rgba(0,0,0,.3)
+		
+	&-active
+		background #d99114
+		box-shadow 0px 0px 5px 0px rgba(0,0,0,.3)
+		
+	&:first-child
+		float left
+	
+	&:last-child
+		float right
+		margin-right 0
+
+.user-profile-main_inform-bl
+	background rgba(#bbb5b0, .8)
+	prefixProperty(border-radius, 10px)
+	padding 20px 15px 15px
+	box-sizing border-box
+	display none
+
+.user-profile-main_inform-bl-list
+	margin-bottom 50px
+	text-align center
+	position relative
+	
+	&-line
+		padding-bottom 25px
+		
+		&::before
+			content ''
+			position absolute
+			bottom 0
+			left 7%
+			right 7%
+			height 3px	
+			background #d9d9d9
+			
+
+.user-profile-main_inform-bl-list li
+	font-size 20px
+	// text-align left
+	margin-bottom 10px
+	font-family "OpenSansBold"
+	
+	& p
+		// max-width 50%
+		// text-align right
+		// float right
+		font-size 18px
+		line-height 24px
+		font-family "OpenSansReg"
+	
+	&::before, &::after
+		content ''
+		display table
+		
+	&::after
+		clear both
+		
+	&:last-child
+		text-align center
+			
+	&:last-child p
+		max-width none
+		float none
+		font-size 18px
+		text-align center
+
+.user-profile-main_inform-bl-edit
+	display inline-block
+	vertical-align top
+	text-align center
+	font-size 22px
+	width 220px
+	height 47px
+	line-height 47px
+	background #0577b4
+	box-shadow 0px 0px 7px 0px rgba(black, .5)
+	prefixProperty(border-radius, 10px)
+	prefixProperty(transition, all .2s)
+	
+	&:hover
+		background #1aacfa
+
+.user-profile-main_inform-bl[data-blockInfo="3"]
+	display inline-block
+
+.company-profile-head
+	margin-bottom 80px
+
+.company-profile-foto-w
+	display inline-block
+	vertical-align middle
+
+.company-profile-name-w
+	display inline-block
+	vertical-align middle
+	margin-left 40px
+
+.company-profile-name
+	font-size 24px
+
+.company-profile-main_inform
+	text-align center
+	margin-bottom 35px
+	
+	&::before, &::after
+		content ''
+		display table
+		
+	&::after
+		clear both
+
+.company-profile-main_inform-links
+	margin-bottom 10px
+		
+.company-profile-main_inform-link
+	background #bbb5b0
+	font-size 20px
+	display inline-block
+	vertical-align top
+	height 50px
+	line-height 50px
+	text-align center
+	width 45%
+	margin-right 15px
+	prefixProperty(transition, all .5s)
+	
+	&:hover
+		background #d99114
+		box-shadow 0px 0px 5px 0px rgba(0,0,0,.3)
+		
+	&-active
+		background #d99114
+		box-shadow 0px 0px 5px 0px rgba(0,0,0,.3)
+		
+	&:first-child
+		float left
+	
+	&:last-child
+		float right
+		margin-right 0
+		
+.company-about-yourself-text
+	line-height 24px
+	margin-bottom 15px
+	
+.company-about-yourself-list-w
+	position relative
+	margin-bottom 30px
+	
+	&::before, &::after
+		content ''
+		display table
+		
+	&::after
+		clear both
+		
+.company-about-yourself-list-w::before
+	content ''
+	position absolute
+	top 50%
+	left 50%
+	margin-top -45px
+	height 90px
+	width 3px
+	background #bbb5b0
+	border-radius 1px
+
+.company-about-yourself-list
+	display inline-block
+	vertical-align top
+	width 45%
+	padding 0
+	position relative
+		
+	& li
+		margin-bottom 12px
+		
+		&:last-child
+			margin-bottom 0
+	
+.company-ab-your-l-text
+	float right
+		
+.company-map-w
+	height 324px
+	background #f1f1f1
+
+.descr-course
+	margin-top -130px
+	
+	&-text-header
+		font-size 20px
+		margin-bottom 20px
+		
+	&-text-content
+		font-size 16px
+		line-height 24px
+		margin-bottom 30px
+	
+	&-quest_themes
+		background #85b171
+		padding 10px 15px
+		border-radius 5px
+		min-height 300px
+		box-sizing border-box
+		
+		&-header
+			font-size 20px
+			margin-bottom 15px
+			text-align center
+		
+		&-list
+			font-size 14px
+
+.descr-course-text-programm
+	position relative
+	&-trainer
+		position absolute
+		right 50px
+		top 10px
+		text-align center
+		&-head
+			font-size 20px
+			margin 0 0 10px
+		&-foto
+			display block
+			width 100px
+			height 100px
+			border-radius 50%
+			overflow hidden
+			margin 0 auto 15px
+			& img
+				display block
+				width 100%
+				min-height auto
+		&-text
+			&-name
+				font-size 20px
+	&-list
+		margin-bottom 50px
+		&-item
+			margin-bottom 10px
+			& li
+				margin-bottom 5px
+		&-header
+			font-size 24px
+			font-weight normal
+			margin-bottom 10px
+		&-sub
+			& p
+				font-size 16px
+				
+.descr-course-questions
+	&-head
+		font-size 24px
+		margin 0 0 5px
+	&-human-u
+		text-align left
+		margin-bottom 20px
+	&-human-consult
+		text-align right
+	&-human
+		display inline-block
+		vertical-align top
+		&-foto
+			width 80px
+			height 80px
+			display inline-block
+			vertical-align top
+			border-radius 50%
+			overflow hidden
+			background url(../img/user-q-def.png) center
+			background-size cover
+			& img 
+				margin 0 auto
+				display inline-block
+				vertical-align middle
+				width auto
+				min-height auto
+		&-name
+			display inline-block
+			vertical-align top
+			margin 10px 20px
+			text-align left
+		&-text
+			padding 3px 10px 10px
+			box-sizing border-box
+			font-size 15px
+			// max-width 270px
+			min-width 280px
+			border 3px solid #92c37c
+			border-radius 10px
+			margin 0px 80px 0
+			text-align left
+			position relative
+			&::before
+				content ''
+				position absolute
+				top -10px
+				left -9px
+				width 22px
+				height 14px
+				background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAOCAYAAAArMezNAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDIxIDc5LjE1NTc3MiwgMjAxNC8wMS8xMy0xOTo0NDowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTQgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjQwM0Q2NjVGMjRFRTExRTZBOUIyRTdGODFBNzk4NDc2IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjQwM0Q2NjYwMjRFRTExRTZBOUIyRTdGODFBNzk4NDc2Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NDAzRDY2NUQyNEVFMTFFNkE5QjJFN0Y4MUE3OTg0NzYiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NDAzRDY2NUUyNEVFMTFFNkE5QjJFN0Y4MUE3OTg0NzYiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz74k6tHAAABZElEQVR42qzTyytEYRjH8XdO41YuC6WhJCvWrOSywIZig0bkupSF2BgbG7HyD8xSkcTkFlIWymwsphQrG6VEWUhuuX+fPHI6nTlnpvzq03nPe97zzDOn9w1MHkVOjDFl+DQ/yUWG+YvM3+JQ7eP89+Fc7axxSxD3KLDNxfGAYpQjD0XoUq/YwTI28OJWOEDHmVyjGNC5VQxp8RAKUYE6NKDa9n4C81ih83d7YUs7GMQIvtCJA2TjGmeIYRw1aMSSdlqFRRxH4lPtzo7t983YRpZ204Q7455KDGNCG5QsYJruL5yFJW1Y18XSWa/xjnQ9hj69v0LYclm4hQ4d96ikobsE+hm24hQlsnOsJOul400dzzi2X7If2NVPuYccy2PtKB51y3WbFELxG7TIP/YqfKlbTxI2aYTiMctnzZpe61GaTnG/wnLcn5Gvh+TfCsvneNNxKJ3CQZ/nso2e8KGnMuV8CzAAeuZVrO+jZ6gAAAAASUVORK5CYII=') center no-repeat
+
+.text-consult
+	&::before
+		left inherit
+		right -9px
+		background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAOCAYAAAArMezNAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDIxIDc5LjE1NTc3MiwgMjAxNC8wMS8xMy0xOTo0NDowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTQgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjU4MTM5MzIzMjRFRTExRTY4QkFDODJFMjAwQzRDNkE2IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjU4MTM5MzI0MjRFRTExRTY4QkFDODJFMjAwQzRDNkE2Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NTgxMzkzMjEyNEVFMTFFNjhCQUM4MkUyMDBDNEM2QTYiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NTgxMzkzMjIyNEVFMTFFNjhCQUM4MkUyMDBDNEM2QTYiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4qwB/cAAABQ0lEQVR42qzUMUgCURzHcZOKgpAGhwgCG6LZhhaTtoaIHMSKhmhqqS2I2hSipqAlWqKIpiAjaiiilnAtCBpqinAwBxHSyhCs7x/+wkPurjvwDx/u3XuPH/fuvbuW1cyaz0UNYAyjKgi/MV5FWdvS/9bqENaBGGYwjvaG8RJekUMXIsbYh1Ww9E1hGUNG/z3ukMELCnjX0ANj3iEWGoMnkURY7ys4xZ4GVi1WdYth/GJxM7KxW386qRBSmNP7Grawj2ebV9WtobKqH0wQemMuewTH6NW+I2zj4Z8N3dFQeYiEGVoPvkYnnrCCSxenZFZJxQm9sNooCb3CPPIuQtuwru1zQs98NicgrhvktuT49eMTS3aT/B5Dpab1eoKsU7CX6kNU22mniV6DBxHANx6bGdxj/BuyzQyWr6uIL+Njsqw/AQYAGZVDrWvx4lcAAAAASUVORK5CYII=') center no-repeat
+
+.descr-course-questions-quest_wrap
+	padding-bottom 10px
+	border-bottom 2px solid #ccc
+	margin-bottom 30px	
