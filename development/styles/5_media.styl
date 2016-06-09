@@ -17,9 +17,6 @@
 	
 	.logo .head-logo
 		font-size 28px
-
-	.head-menu li
-		font-size 16px
 	
 	.status .st-name
 		font-size 16px
@@ -49,16 +46,14 @@
 @media screen and (max-width: 1045px)
 	.cour-l-head
 		font-size 19px
-	
-	.head-menu li
-		font-size 18px
-	
+		
 	.courses-list li.large-3.medium-4
 		width 33.33333%
 
 @media screen and (max-width: 1024px)
 	.user-btn-w
 		text-align center
+	
 	.user-btn
 		font-size 0
 		width 90px
@@ -75,11 +70,32 @@
 			height 27px
 			line-height 27px
 			font-size 15px
-			
+	
+	.descr-course-text-content
+		margin-bottom 10px	
+	
+	.company-about-yourself-list-w::before
+		display none
+
+	.company-about-yourself-list
+		font-size 18px
+		font-family 'OpenSansBold'
+
+	.company-ab-your-l-text
+		float none
+		font-family 'OpenSansReg'
+	
+	.user-profile
+		&-head
+			text-align center			
+		&-name-w
+			width 50%
+			margin 0 0 0 10px
+			text-align left
 		
 @media screen and (max-width: 970px)	
 	header
-		margin-bottom 30px
+		margin 0 0 20px
 		
 	.h-menu-w
 		width 100%
@@ -94,10 +110,7 @@
 		width 20px
 		height 20px
 		line-height 20px
-			
-	.status .st-name
-		font-size 14px
-	
+				
 	.status .st-stat
 		font-size 14px
 	
@@ -165,7 +178,24 @@
 	.kn-your-btn
 		font-size 18px
 		
-@media screen and (max-width: 640px)
+	.company-profile-main_inform-link
+		font-size 18px
+	
+	.user-profile-main_inform-link
+		font-size 16px
+		margin 0 5px 0
+	
+	.descr-course-questions-human-consult
+		margin-left -60px
+
+@media screen and (max-width: 641px)
+	.descr-course-quest_themes
+		display none
+		
+	.tablet-v
+		margin 10px 0
+		display block
+		
 	.user-btn-w
 		max-width none
 		
@@ -206,6 +236,10 @@
 		&-item
 			width 70% 
 			margin 0 !important
+	
+	.user-profile-main_inform-bl
+		&.info-active
+			display block
 			
 @media screen and (max-width: 600px)
 	.courses-list
@@ -221,3 +255,20 @@
 			font-size 20px
 		&-params li
 			font-size 18px
+	
+	.company-profile
+		&-head
+			margin 0 0 20px
+		&-foto-w
+			display block
+			text-align center
+			margin 0 0 10px
+		&-name-w
+			display block
+			text-align center
+			margin 0
+		
+// @media screen and (max-width: 470px)
+// 	.user-profile-info-prof
+// 		margin 0
+// 		display block

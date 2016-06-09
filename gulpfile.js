@@ -54,7 +54,11 @@
   });
 
   gulp.task('js', function() {
-    return gulp.src('development/js/**/*.js')
+    var pathJs = 'development/js/'
+    return gulp.src([pathJs + 'popup.js', pathJs + 'main.js', pathJs + 'data.js'])
+          .pipe(sourcemaps.init())
+          .pipe(concat('main.js'))
+          .pipe(sourcemaps.write())
           .pipe(gulp.dest('public/js'))
   });
 

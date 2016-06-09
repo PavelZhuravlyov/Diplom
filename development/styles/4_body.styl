@@ -12,6 +12,17 @@ body
 	padding 35px 0 20px
 	font-family 'OpenSansReg'
 	line-height inherit
+	overflow-x hidden
+	min-width 470px
+	position relative
+	
+.body-shadow::before
+	position fixed
+	top 0
+	left 0
+	right 0
+	bottom 0
+	background rgba(0, 0, 0, .5)
 	
 .m-search
 	margin-bottom 26px
@@ -269,19 +280,19 @@ body
 
 .pop-ups
 	position absolute
-	top 50%
-	left: 50%
+	top 0
+	left 0
+	right 0
+	bottom 0
+	display none
 	z-index 30
 
-.pop-up-auto
-	display none
-
-.pop-up-auto, .pop-up-reg
+.pop-up
 	position fixed
 	top 50%
 	left 50%
 	width 380px
-	margin -209px 0 0 -140px
+	transform translate(-50%, -50%)
 	prefixProperty(border-radius, 8px)
 	prefixProperty(transition, background .5s)
 	padding 20px
@@ -292,6 +303,8 @@ body
 	background: -webkit-linear-gradient(top,  #ae9f93 0%,#dab797 34%,#efc090 68%,#eaaa5d 100%); 
 	background: linear-gradient(to bottom,  #ae9f93 0%,#dab797 34%,#efc090 68%,#eaaa5d 100%); 
 
+.pop-up-auto,
+.pop-up-reg
 	&-head
 		font-family "OpenSansBold"
 		font-size 28px	
@@ -315,7 +328,7 @@ body
 		&:after
 			clear both	
 					
-		& table tr
+		// & table tr
 						
 		&-text
 			display block
@@ -419,9 +432,9 @@ body
 	z-index 1
 
 .pop-up-reg
-	display none
+	// display none
 	position absolute
-	top: 0
+	top 80%
 	
 .center-btn
 	text-align center
@@ -563,6 +576,9 @@ body
 	box-sizing border-box
 	display none
 
+.user-profile-main_inform-bl.info-active
+	display inline-block
+
 .user-profile-main_inform-bl-list
 	margin-bottom 50px
 	text-align center
@@ -627,11 +643,14 @@ body
 	&:hover
 		background #1aacfa
 
-.user-profile-main_inform-bl[data-blockInfo="3"]
-	display inline-block
+.profile-info_text
+	font-size 28px
+	text-align left
+	margin-bottom 10px
+	font-family "OpenSansBold"
 
 .company-profile-head
-	margin-bottom 80px
+	margin 0 0 40px
 
 .company-profile-foto-w
 	display inline-block
@@ -675,25 +694,29 @@ body
 		background #d99114
 		box-shadow 0px 0px 5px 0px rgba(0,0,0,.3)
 		
-	&-active
-		background #d99114
-		box-shadow 0px 0px 5px 0px rgba(0,0,0,.3)
-		
 	&:first-child
 		float left
 	
 	&:last-child
 		float right
 		margin-right 0
+
+.link-active
+	background #d99114
+	box-shadow 0px 0px 5px 0px rgba(0,0,0,.3)
 		
 .company-about-yourself-text
 	line-height 24px
 	margin-bottom 15px
-	
+
+.company-about-info
+	display none
+
 .company-about-yourself-list-w
 	position relative
 	margin-bottom 30px
-	
+	height auto
+
 	&::before, &::after
 		content ''
 		display table
@@ -704,11 +727,11 @@ body
 .company-about-yourself-list-w::before
 	content ''
 	position absolute
-	top 50%
+	top 5px
 	left 50%
-	margin-top -45px
-	height 90px
+	transform translate(-50%, 0)
 	width 3px
+	height 90px
 	background #bbb5b0
 	border-radius 1px
 
@@ -733,8 +756,6 @@ body
 	background #f1f1f1
 
 .descr-course
-	margin-top -130px
-	
 	&-text-header
 		font-size 20px
 		margin-bottom 20px
@@ -750,6 +771,7 @@ body
 		border-radius 5px
 		min-height 300px
 		box-sizing border-box
+		float right
 		
 		&-header
 			font-size 20px
@@ -758,14 +780,30 @@ body
 		
 		&-list
 			font-size 14px
+			& li
+				margin 0 0 10px
+				border-bottom 1px solid rgba(#dab797, .5)
+				
+	&-sign
+		display inline-block
+		vertical-align top
+		line-height 40px
+		height 40px
+		background #0d98e2
+		text-align center
+		font-size 22px
+		prefixProperty(transition, all 0.2s)
+		border-radius 10px
+		width 270px
+		&:hover
+			background #1aacfa
 
 .descr-course-text-programm
 	position relative
+	margin-bottom 30px
 	&-trainer
-		position absolute
-		right 50px
-		top 10px
 		text-align center
+		margin 0 0 20px
 		&-head
 			font-size 20px
 			margin 0 0 10px
@@ -784,7 +822,9 @@ body
 			&-name
 				font-size 20px
 	&-list
-		margin-bottom 50px
+		display inline-block
+		vertical-align top
+		margin-bottom 10px
 		&-item
 			margin-bottom 10px
 			& li
@@ -859,3 +899,14 @@ body
 	padding-bottom 10px
 	border-bottom 2px solid #ccc
 	margin-bottom 30px	
+
+.tablet-v
+	display none
+
+.info-active
+	display block
+	
+.company-about-info 
+	& .courses-list
+		& li
+			margin-right 0 !important

@@ -12,7 +12,7 @@
     <div class="row">
       <div class="logo large-3 medium-3 column">
           <h1 class="head-logo">SearchCourses</h1></div>
-      <div class="large-6 medium-7 column h-menu-w">
+      <div class="large-6 medium-8 column h-menu-w">
           <ul class="head-menu">
             <li class="list-active"><a href="#">Главная</a></li>
             <li><a href="#">Помощь</a></li>
@@ -25,7 +25,7 @@
   <section class="main">
     <div class="row m-search">
       <div class="large-3 medium-3 small-6 column auto-reg-btn">
-        <a href="#" class="auto-reg">Войти</a>
+        <a href="#" class="auto-reg js-auto_reg" data-button="autoriz">Войти</a>
       </div>
       <div class="large-9 medium-9 column form">
         <form action="#" method="POST" class="search-form">
@@ -230,8 +230,9 @@
       </div>
     </div>
   </section>
+  <div class="pop-ups"></div>
   <div class="pop-ups">
-    <div class="pop-up-auto">
+    <!-- <div class="pop-up-auto">
       <h1 class="pop-up-auto-head">Авторизация</h1>
       <p class="pop-up-auto-pref">Чтобы войти в личный кабинет введите логин и пароль</p>
       <form action="#" method="POST" class="pop-up-auto-form">
@@ -255,8 +256,8 @@
         </div>
       </form>
       <a href="#" class="pop-up-close"></a>
-    </div>
-    <div class="pop-up-reg">
+    </div> -->
+    <div class="pop-up-reg pop-up">
       <h1 class="pop-up-auto-head">Регистрация</h1>
       <p class="pop-up-auto-pref">Для того, чтобы пользоваться услугами сайта необходимо зарегистрироваться</p>
       <form action="#" method="POST" class="pop-up-auto-form">
@@ -296,31 +297,40 @@
       <a href="#" class="pop-up-close"></a>
     </div>
   </div>
-  <script id="autorization" type="text/x-handlebars-template">
-  	<div class="pop-up-auto">
+  
+  <script id="autor_reg" type="text/x-handlebars-template">
+  	<div class="pop-up-auto pop-up">
       <h1 class="pop-up-auto-head">{{name}}</h1>
       <p class="pop-up-auto-pref">{{prefix}}</p>
-      <form action="#" method="POST" class="pop-up-auto-form">
-      		{{#with fields}}
-      			{{each this}}
-	            <label class="pop-up-auto-f-l">
+      {{#if fields.length}}
+        <form action="#" method="POST" class="pop-up-auto-form">
+    			{{#each fields}}
+            {{#if this.checkbox}}
+              <label class="pop-up-auto-f-l">
+                <span class="pop-up-auto-f-l-text-ch">Запомнить меня </span>
+                <input type="checkbox" name="Auto[remember]" class="pop-up-auto-f-l-checkbox" />
+              </label>
+              </label>
+            {{else}}
+              <label class="pop-up-auto-f-l">
             	  <span class="pop-up-auto-f-l-text">{{name}}</span>
                 <input type="{{typeField}}" name="{{nameField}}" class="pop-up-auto-f-l-inp search-form-input" />
-	            </label>
-            {{/each}}
-          {{/with}}
+              </label>
+            {{/if}}
+          {{/each}}
           <div class="pop-up-auto-f-l-wr">
-              <div class="pop-up-auto-f-l-btn"> <a href="#" class="pop-up-auto-f-l-sub">Регистрация</a></div>
+              <div class="pop-up-auto-f-l-btn"> <a href="#" class="pop-up-auto-f-l-sub js-auto_reg" data-button="registr">Регистрация</a></div>
               <div class="pop-up-auto-f-l-btn">
-                  <input type="submit" value="Войти" class="pop-up-auto-f-l-sub" />
+                <input type="submit" value="Войти" class="pop-up-auto-f-l-sub" />
               </div>
           </div>
-      </form>
-      <a href="#" class="pop-up-close"></a>
+        </form>
+      {{/if}}
+      <a href="#" class="pop-up-close js-close_popup"></a>
     </div>
   </script>
-  <script src="js/handlebars.js"></script>
   <script src="js/jquery.js"></script>
+  <script src="js/handlebars.js"></script>
   <script src="js/main.js">
   </script>
 </body>
