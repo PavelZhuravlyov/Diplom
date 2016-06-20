@@ -1,0 +1,46 @@
+{
+	"name": "Авторизация",
+	"prefix": "Чтобы войти в личный кабинет введите логин и пароль",
+	"form": "autorization",
+	"fields": [
+		{
+			"name": "Логин(e-mail)",
+			"typeField": "text",
+			"nameField": "Auto[login]"
+		},
+		{
+			"name": "Пароль",
+			"typeField": "password",
+			"nameField": "Auto[pass]"
+		},
+		{
+			"name": "Вход Компании",
+			"typeField": "checkbox",
+			"nameField": "Auto[company]",
+			"checkbox": true
+		},
+		{
+			"name": "Запомнить меня",
+			"typeField": "checkbox",
+			"nameField": "Auto[remember]",
+			"checkbox": true
+		}
+	],
+	"rememberPass": {
+		"text": "Забыли пароль?"
+	},
+	"buttons": [
+		{
+			"value": "Войти",
+			"type": "submit",
+			"data": "",
+			"classes": "pop-up-auto-f-l-sub js-submit"
+		},
+		{
+			"value": "Регистрация",
+			"type": "submit",
+			"data": "registr",
+			"classes": "pop-up-auto-f-l-sub js-auto_reg registr-btn"
+		}
+	]
+}

@@ -3,33 +3,16 @@
   var autoprefixer, browserSync, concat, debug, del, gulp, jade, notify, path, remember, sourcemaps, stylus, uncss, watch;
 
   gulp = require('gulp');
-
   stylus = require('gulp-stylus');
-
   concat = require('gulp-concat');
-
   autoprefixer = require('gulp-autoprefixer');
-
-  jade = require('gulp-jade');
-
   sourcemaps = require('gulp-sourcemaps');
-
-  uncss = require('gulp-uncss');
-
   watch = require('gulp-watch');
-
-  del = require('del');
-
   notify = require('gulp-notify');
-
   remember = require('gulp-remember');
-
-  debug = require('gulp-debug');
-
   path = require('path');
-
   browserSync = require('browser-sync').create();
-
+  
   gulp.task('html', function() {
     return gulp.src('development/temp/**/*.html', { since: gulp.lastRun('html') })
           .pipe(gulp.dest('public/'));

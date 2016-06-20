@@ -1,0 +1,73 @@
+{
+	"name": "Регистрация",
+	"prefix": "Для того, чтобы пользоваться услугами сайта необходимо зарегистрироваться",
+	"form": "registration",
+	"registr_class": "popup-registration",
+	"fields": [
+		{
+			"name": "Логин",
+			"typeField": "text",
+			"nameField": "Reg[login]",
+			"required": "required"
+		},
+		{
+			"name": "Пароль",
+			"typeField": "password",
+			"nameField": "Reg[password]",
+			"required": "required"
+		},
+		{
+			"name": "E-mail",
+			"typeField": "e-mail",
+			"nameField": "Reg[e-mail]",
+			"required": "required"
+		},
+		{
+			"name": "Город проживания",
+			"typeField": "text",
+			"nameField": "Reg[town]",
+			"required": "required"
+		},
+		{
+			"name": "Имя",
+			"typeField": "text",
+			"nameField": "Reg[name]",
+			"required": "required"
+		},
+		{
+			"name": "Фамилия",
+			"typeField": "text",
+			"nameField": "Reg[secondname]",
+			"required": "required"
+		},
+		{
+			"name": "Отчество",
+			"typeField": "text",
+			"nameField": "Reg[surname]"
+		},
+		{
+			"name": "Телефон",
+			"typeField": "text",
+			"nameField": "Reg[phone_numb]",
+			"required": "required"
+		},
+		{
+			"name": "О себе",
+			"typeField": "text",
+			"nameField": "Reg[about_yourself]"
+		},
+		{
+			"name": "Хобби",
+			"typeField": "text",
+			"nameField": "Reg[hobby]"
+		}
+	],
+	"buttons": [
+		{
+			"value": "Зарегистрироваться",
+			"type": "submit",
+			"data": "",
+			"classes": "pop-up-auto-f-l-sub pop-up-reg-f-l-sub-btn js-submit"
+		}
+	]
+}
